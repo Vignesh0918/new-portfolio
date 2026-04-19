@@ -45,12 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 const navHeight = navbar.offsetHeight;
                 const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
-                
+
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentText = '';
     let letter = '';
     let isDeleting = false;
-    
+
     function type() {
         if (count === texts.length) {
             count = 0;
